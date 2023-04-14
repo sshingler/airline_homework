@@ -22,6 +22,10 @@ public class CabinCrewMemberTest {
         assertEquals(Rank.flightAttendant, cabinCrewMember.getRank());
     }
 
+    @Test
+    public void canRelayMessages(){
+        assertEquals("Hold on tight!", cabinCrewMember.relayMessage());
+    }
 
 
 

@@ -11,4 +11,8 @@ public class CabinCrewMember extends Person {
     public Rank getRank() {
         return rank;
     }
+
+    public String relayMessage() {
+        return "Hold on tight!";
+    }
 }
