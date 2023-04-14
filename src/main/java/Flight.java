@@ -50,4 +50,42 @@ public class Flight {
     public String getDepartureTime(){
         return departureTime;
     }
+
+    public void addCrew(CabinCrewMember...crewMembers) {
+        this.cabinCrew.addAll(List.of(crewMembers));
+    }
+
+    public ArrayList<CabinCrewMember> getCrew() {
+        return cabinCrew;
+    }
+
+    public void addPassengers(Passenger...passengers){
+        this.passengers.addAll(List.of(passengers));
+    }
+    public ArrayList<Passenger> getPassengers(){
+        return passengers;
+    }
+
+    public int getNumberOfPassengers(){
+        return this.passengers.size();
+    }
+
+    public int getNumberOfBags(){
+        int total =0;
+        for (Passenger passenger : passengers){
+            total += passenger.getNumberOfBags();
+        }
+        return total;
+    }
+
+    public int availableSeats(){
+        int capacity = this.plane.getType().getCapacity();
+        return capacity - getNumberOfPassengers();
+    }
+
+    public void addPassenger (Passenger passenger){
+        if(availableSeats() > 0){
+            this.passengers.add(passenger);
+        }
+    }
 }
