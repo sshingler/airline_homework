@@ -29,6 +29,30 @@ public class FlightTest {
     }
 
     @Test
+    public void canAddPlane (){
+        assertEquals(plane, flight.getPlane());
+    }
+    @Test
+    public void canAddFlightNumber(){
+        assertEquals("FN123", flight.getFlightNumber());
+    }
+
+    @Test
+    public void canAddDestination(){
+        assertEquals("DesParis", flight.getDestinationAirport());
+    }
+
+    @Test
+    public void canAddDepartureAirport(){
+        assertEquals("DeptInv", flight.getDepartureAirport());
+    }
+
+    @Test
+    public void canAddDepartureTime(){
+        assertEquals("DT0800", flight.getDepartureTime());
+    }
+
+    @Test
     public void canAddPilot (){
         flight.setPilot(pilot);
         assertEquals(pilot, flight.getPilot());

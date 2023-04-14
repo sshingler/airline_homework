@@ -30,4 +30,24 @@ public class Flight {
     public Pilot getPilot() {
         return pilot;
     }
+
+    public Plane getPlane() {
+        return plane;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public String getDestinationAirport() {
+        return destination;
+    }
+
+    public String getDepartureAirport() {
+        return departureAirport;
+    }
+
+    public String getDepartureTime(){
+        return departureTime;
+    }
 }
